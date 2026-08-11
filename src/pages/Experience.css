@@ -1,0 +1,509 @@
+/* ==================== EXPERIENCE PAGE ==================== */
+.exp-page {
+  padding: 36px 0 56px;
+}
+
+/* Header */
+.exp-header {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+
+.exp-badge {
+  display: inline-flex;
+  padding: 6px 14px;
+  background: var(--primary-soft);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--primary-bright);
+  margin-bottom: 14px;
+}
+
+.exp-title {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+.exp-title-hl {
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.exp-sub {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
+  max-width: 480px;
+}
+
+.exp-side-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 20px 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.exp-side-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--primary-soft);
+  color: var(--primary-bright);
+}
+
+.exp-side-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.exp-side-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 6px;
+}
+
+.exp-side-card p {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.exp-side-line {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+/* Timeline head */
+.exp-timeline-wrap {
+  margin-bottom: 36px;
+}
+
+.exp-timeline-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.exp-tl-icon {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-bright);
+}
+
+.exp-tl-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.exp-timeline-head h2 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  white-space: nowrap;
+}
+
+.exp-tl-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* Timeline items */
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.exp-item {
+  display: grid;
+  grid-template-columns: 130px 28px 1fr;
+  gap: 0 16px;
+  align-items: stretch;
+}
+
+.exp-date-col {
+  padding-top: 20px;
+  text-align: right;
+}
+
+.exp-date strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.35;
+}
+
+.exp-date span {
+  display: block;
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 4px;
+}
+
+/* Rail */
+.exp-rail {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 24px;
+}
+
+.exp-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 3px solid var(--primary);
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+  z-index: 1;
+  flex-shrink: 0;
+}
+
+.exp-dot.green {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.15);
+}
+
+.exp-rail-line {
+  flex: 1;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(59, 130, 246, 0.5),
+    rgba(59, 130, 246, 0.15)
+  );
+  min-height: 24px;
+  margin-top: 4px;
+}
+
+/* Card */
+.exp-card {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.exp-card.clickable {
+  cursor: pointer;
+}
+
+.exp-card.clickable:hover {
+  border-color: var(--border-strong);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+  transform: translateY(-2px);
+}
+
+.exp-card-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.exp-logo-box {
+  width: 72px;
+  height: 72px;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  font-weight: 700;
+  color: var(--primary-bright);
+}
+
+.exp-logo-box.company {
+  background: linear-gradient(145deg, #0f172a, #1e293b);
+  gap: 2px;
+}
+
+.exp-logo-ai {
+  font-size: 18px;
+  font-weight: 800;
+  color: #f97316;
+  letter-spacing: -0.5px;
+}
+
+.exp-logo-name {
+  font-size: 7px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 0.3px;
+}
+
+.exp-logo-box.code {
+  font-size: 22px;
+  font-family: var(--font-display);
+  color: var(--accent);
+}
+
+.exp-logo-box.edu {
+  font-size: 28px;
+}
+
+.exp-type-pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.type-blue {
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.type-purple {
+  background: rgba(129, 140, 248, 0.15);
+  color: #a5b4fc;
+  border: 1px solid rgba(129, 140, 248, 0.3);
+}
+
+.type-green {
+  background: rgba(34, 197, 94, 0.12);
+  color: #4ade80;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.exp-mobile-date {
+  display: none;
+  margin-bottom: 8px;
+}
+
+.exp-mobile-date strong {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.exp-mobile-date span {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+.exp-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+.exp-view-hint {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--primary-bright);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.exp-card.clickable:hover .exp-view-hint {
+  opacity: 1;
+}
+
+.exp-company {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--primary-bright);
+  margin: 0 0 8px;
+}
+
+.exp-desc {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin: 0 0 12px;
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.exp-tags span {
+  padding: 4px 10px;
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+/* Bottom CTA */
+.exp-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background-image: radial-gradient(
+    ellipse at left center,
+    rgba(59, 130, 246, 0.1) 0%,
+    transparent 55%
+  );
+}
+
+.exp-bottom-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.exp-bottom-icon {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--primary-soft);
+  color: var(--primary-bright);
+  font-size: 18px;
+}
+
+.exp-bottom-left h3 {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0 0 4px;
+}
+
+.exp-bottom-left p {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .exp-header {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-item {
+    grid-template-columns: 24px 1fr;
+    gap: 0 12px;
+  }
+
+  .exp-date-col {
+    display: none;
+  }
+
+  .exp-mobile-date {
+    display: block;
+  }
+
+  .exp-card {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .exp-card-logo {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .exp-logo-box {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 600px) {
+  .exp-page {
+    padding: 24px 0 40px;
+  }
+
+  .exp-card {
+    padding: 16px;
+  }
+
+  .exp-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px 16px;
+  }
+
+  .exp-bottom .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Mobile: inject period into card via data - handled in layout */
+  .exp-item {
+    position: relative;
+  }
+
+  .exp-date-mobile {
+    display: block;
+  }
+}
+
+/* Mobile date shown via extra element in card - use CSS order */
+@media (max-width: 900px) {
+  .exp-card-body h3 {
+    font-size: 15px;
+  }
+}

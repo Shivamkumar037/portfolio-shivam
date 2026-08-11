@@ -1,0 +1,87 @@
+/* Mobile app-style bottom nav */
+.bottom-nav {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  min-height: 64px;
+  background: rgba(11, 18, 32, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  padding: 6px 4px max(8px, env(safe-area-inset-bottom));
+  justify-content: space-around;
+  align-items: stretch;
+  box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.35);
+}
+
+.bn-tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  padding: 8px 2px;
+  min-height: 48px;
+  border-radius: 12px;
+  transition: color 0.2s ease, background 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.bn-tab:active {
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.bn-tab.active {
+  color: var(--primary-bright);
+}
+
+.bn-tab.active .bn-icon {
+  transform: translateY(-1px);
+}
+
+.bn-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.bn-icon svg {
+  width: 21px;
+  height: 21px;
+}
+
+.bn-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: flex;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .bn-label {
+    font-size: 9px;
+  }
+
+  .bn-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+}
