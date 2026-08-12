@@ -13,27 +13,56 @@ const Navbar = ({ activePage = 'home', onNavigate }) => {
   return (
     <header className="nav">
       <div className="container nav-inner">
-        <button className="nav-logo" onClick={() => go('home')}>
+
+        {/* Logo */}
+        <button
+          className="nav-logo"
+          onClick={() => go('home')}
+        >
           <span className="logo-brackets">&lt;/&gt;</span>
-          <span className="logo-text">{global.logoText}</span>
+
+          <span className="logo-text">
+            {global.logoText}
+          </span>
         </button>
 
+
+        {/* Desktop Navigation */}
         <nav className="nav-links">
+
           {global.nav.map((item) => (
             <button
               key={item.id}
-              className={`nav-link ${activePage === item.id ? 'active' : ''}`}
+              className={`nav-link ${activePage === item.id ? 'active' : ''
+                }`}
               onClick={() => go(item.id)}
             >
               {item.label}
             </button>
           ))}
+
+          {/* Certificates */}
+          <button
+            className={`nav-link ${activePage === 'certificate' ? 'active' : ''
+              }`}
+            onClick={() => go('certificate')}
+          >
+            Certificates
+          </button>
+
         </nav>
 
-        <button className="btn btn-primary nav-cta desktop-only" onClick={() => go('contact')}>
+
+        {/* Let's Talk */}
+        <button
+          className="btn btn-primary nav-cta desktop-only"
+          onClick={() => go('contact')}
+        >
           {global.cta.primary}
         </button>
 
+
+        {/* Mobile Hamburger */}
         <button
           className={`hamburger ${open ? 'open' : ''}`}
           onClick={() => setOpen(!open)}
@@ -43,22 +72,44 @@ const Navbar = ({ activePage = 'home', onNavigate }) => {
           <span />
           <span />
         </button>
+
       </div>
 
+
+      {/* Mobile Dropdown */}
       {open && (
         <div className="nav-dropdown">
+
           {global.nav.map((item) => (
             <button
               key={item.id}
-              className={`nav-drop-link ${activePage === item.id ? 'active' : ''}`}
+              className={`nav-drop-link ${activePage === item.id ? 'active' : ''
+                }`}
               onClick={() => go(item.id)}
             >
               {item.label}
             </button>
           ))}
-          <button className="btn btn-primary drop-cta" onClick={() => go('contact')}>
+
+
+          {/* Certificates */}
+          <button
+            className={`nav-drop-link ${activePage === 'certificate' ? 'active' : ''
+              }`}
+            onClick={() => go('certificate')}
+          >
+            Certificates
+          </button>
+
+
+          {/* Let's Talk */}
+          <button
+            className="btn btn-primary drop-cta"
+            onClick={() => go('contact')}
+          >
             {global.cta.primary}
           </button>
+
         </div>
       )}
     </header>

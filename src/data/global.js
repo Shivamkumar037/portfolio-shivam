@@ -23,6 +23,7 @@ const global = {
     { id: "about", label: "About", icon: "user" },
     { id: "projects", label: "Projects", icon: "folder" },
     { id: "experience", label: "Experience", icon: "briefcase" },
+  
     { id: "contact", label: "Contact", icon: "mail" }
   ],
 

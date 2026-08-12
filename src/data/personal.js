@@ -54,7 +54,7 @@ const personal = {
       "Clean Code & Best Practices",
       "Continuous Learning & Improvement"
     ],
-    resumeUrl: "/resume.pdf",
+    resumeUrl: "/Resume/Shivam_Kumar_Backend_Developer_Resume.pdf",
     stats: [
       { id: 1, value: "1+", label: "Years of Learning", icon: "calendar" },
       { id: 2, value: "5+", label: "Projects Completed", icon: "code" },

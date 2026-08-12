@@ -1,0 +1,1159 @@
+/* =====================================================
+   CERTIFICATIONS PAGE
+===================================================== */
+
+.certificates-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  padding: 120px 0 100px;
+
+  background:
+    radial-gradient(circle at 82% 15%,
+      rgba(38, 102, 255, 0.08),
+      transparent 30%),
+    radial-gradient(circle at 10% 80%,
+      rgba(99, 78, 255, 0.06),
+      transparent 30%),
+    #070b14;
+
+  color: #eef4ff;
+}
+
+
+/* =====================================================
+   BACKGROUND GLOW
+===================================================== */
+
+.certificate-glow {
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  pointer-events: none;
+
+  opacity: 0.13;
+}
+
+.certificate-glow-one {
+  top: 5%;
+  right: -150px;
+
+  background: #267cff;
+}
+
+.certificate-glow-two {
+  bottom: -180px;
+  left: -150px;
+
+  background: #6c4cff;
+}
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.certificates-container {
+  position: relative;
+
+  width: min(1150px, calc(100% - 40px));
+
+  margin: 0 auto;
+
+  z-index: 2;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.certificates-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.certificate-heading-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 9px 17px;
+
+  border: 1px solid rgba(48, 130, 255, 0.45);
+
+  border-radius: 30px;
+
+  color: #55a0ff;
+
+  background: rgba(30, 108, 255, 0.06);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+
+  box-shadow:
+    0 0 20px rgba(30, 108, 255, 0.05);
+}
+
+.certificates-header h1 {
+  margin: 18px 0 12px;
+
+  color: #f1f5ff;
+
+  font-size: clamp(42px, 5vw, 62px);
+
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  letter-spacing: -1.8px;
+}
+
+.certificates-header h1 span {
+  color: #4b8fff;
+}
+
+.certificates-header>p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #8fa3c4;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+.certificate-heading-line {
+  width: 60px;
+  height: 3px;
+
+  margin-top: 18px;
+
+  border-radius: 10px;
+
+  background: #3e8bff;
+
+  box-shadow:
+    0 0 15px rgba(62, 139, 255, 0.7);
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.certificates-content {
+  display: grid;
+
+  grid-template-columns: 350px minmax(0, 1fr);
+
+  gap: 28px;
+
+  align-items: stretch;
+}
+
+
+/* =====================================================
+   CERTIFICATE LIST
+===================================================== */
+
+.certificate-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+}
+
+.certificate-item {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 83px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 13px 15px;
+
+  border: 1px solid #1c2b44;
+
+  border-radius: 17px;
+
+  outline: none;
+
+  color: inherit;
+
+  background:
+    linear-gradient(135deg,
+      rgba(16, 27, 46, 0.9),
+      rgba(9, 17, 30, 0.95));
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.certificate-item:hover {
+  transform: translateX(4px);
+
+  border-color: #287dff;
+
+  box-shadow:
+    0 10px 35px rgba(25, 107, 255, 0.09);
+}
+
+.certificate-item.active {
+  border-color: #2990ff;
+
+  background:
+    linear-gradient(135deg,
+      rgba(16, 40, 76, 0.95),
+      rgba(10, 24, 43, 0.95));
+
+  box-shadow:
+    0 0 0 1px rgba(41, 144, 255, 0.12),
+    0 12px 35px rgba(25, 107, 255, 0.12);
+}
+
+
+/* =====================================================
+   CERTIFICATE ICON
+===================================================== */
+
+.certificate-item-icon {
+  width: 52px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 14px;
+
+  color: #ffffff;
+
+  background: #112b52;
+
+  box-shadow:
+    inset 0 0 20px rgba(255, 255, 255, 0.03);
+}
+
+.certificate-item-icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+
+/* Different icon backgrounds */
+
+.certificate-item-icon.java {
+  background:
+    linear-gradient(145deg,
+      #193f72,
+      #102543);
+
+  color: #ffffff;
+}
+
+.certificate-item-icon.spring {
+  background:
+    linear-gradient(145deg,
+      #174f35,
+      #102a20);
+
+  color: #7be35f;
+}
+
+.certificate-item-icon.database {
+  background:
+    linear-gradient(145deg,
+      #48207d,
+      #24133f);
+
+  color: #b47cff;
+}
+
+.certificate-item-icon.git {
+  background:
+    linear-gradient(145deg,
+      #612c1f,
+      #321b18);
+
+  color: #ff704d;
+}
+
+
+/* =====================================================
+   ITEM CONTENT
+===================================================== */
+
+.certificate-item-info {
+  min-width: 0;
+
+  flex: 1;
+}
+
+.certificate-item-info h3 {
+  margin: 0 0 6px;
+
+  overflow: hidden;
+
+  color: #edf3ff;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.certificate-item-meta {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  color: #7d9dcc;
+
+  font-size: 12px;
+}
+
+.certificate-item-meta span:first-child {
+  color: #579bff;
+}
+
+.certificate-item-meta i {
+  color: #52657f;
+
+  font-style: normal;
+}
+
+.certificate-item-arrow {
+  flex-shrink: 0;
+
+  color: #7593bd;
+
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.certificate-item:hover .certificate-item-arrow,
+.certificate-item.active .certificate-item-arrow {
+  color: #4b98ff;
+
+  transform: translateX(3px);
+}
+
+
+/* =====================================================
+   PREVIEW
+===================================================== */
+
+.certificate-preview {
+  min-width: 0;
+
+  overflow: hidden;
+
+  border: 1px solid #1d2d48;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(145deg,
+      rgba(15, 27, 46, 0.95),
+      rgba(8, 16, 29, 0.98));
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =====================================================
+   PREVIEW HEADER
+===================================================== */
+
+.certificate-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 15px;
+
+  padding: 20px 23px;
+
+  border-bottom: 1px solid #1d2b42;
+}
+
+.certificate-preview-title {
+  min-width: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+}
+
+.certificate-preview-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #142f58;
+}
+
+.certificate-preview-icon svg {
+  width: 25px;
+  height: 25px;
+}
+
+.certificate-preview-icon.java {
+  color: #ffffff;
+  background: #183d70;
+}
+
+.certificate-preview-icon.spring {
+  color: #7be35f;
+  background: #17462f;
+}
+
+.certificate-preview-icon.database {
+  color: #b47cff;
+  background: #432075;
+}
+
+.certificate-preview-icon.git {
+  color: #ff704d;
+  background: #5c2a1f;
+}
+
+.certificate-title-row {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  flex-wrap: wrap;
+}
+
+.certificate-title-row h2 {
+  margin: 0;
+
+  color: #f1f5ff;
+
+  font-size: 18px;
+
+  font-weight: 650;
+}
+
+.certificate-preview-title p {
+  margin: 4px 0 0;
+
+  color: #7d94b7;
+
+  font-size: 12px;
+}
+
+.certificate-preview-title p strong {
+  color: #559bff;
+}
+
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 4px;
+
+  padding: 4px 8px;
+
+  border: 1px solid rgba(59, 142, 255, 0.35);
+
+  border-radius: 20px;
+
+  color: #62a6ff;
+
+  background: rgba(38, 126, 255, 0.08);
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.preview-status {
+  width: 10px;
+  height: 10px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.preview-status span {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #378cff;
+
+  box-shadow:
+    0 0 10px rgba(55, 140, 255, 0.8);
+}
+
+
+/* =====================================================
+   PREVIEW BODY
+===================================================== */
+
+.certificate-preview-body {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr) 310px;
+
+  gap: 25px;
+
+  padding: 24px;
+}
+
+
+/* =====================================================
+   CERTIFICATE IMAGE
+===================================================== */
+
+.certificate-image-wrapper {
+  width: 100%;
+
+  aspect-ratio: 1.42 / 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border: 1px solid #263754;
+
+  border-radius: 12px;
+
+  background: #070d17;
+}
+
+.certificate-image-wrapper img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+.certificate-image-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 12px;
+
+  color: #526b91;
+
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   INFORMATION
+===================================================== */
+
+.certificate-information {
+  display: flex;
+
+  flex-direction: column;
+
+  min-width: 0;
+}
+
+.certificate-info-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 19px;
+}
+
+.certificate-info-icon {
+  width: 34px;
+  height: 34px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  color: #3790ff;
+
+  background: rgba(34, 122, 255, 0.09);
+}
+
+.certificate-info-row span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #647c9f;
+
+  font-size: 11px;
+}
+
+.certificate-info-row strong {
+  display: block;
+
+  color: #e1e9f7;
+
+  font-size: 13px;
+
+  font-weight: 500;
+
+  word-break: break-word;
+}
+
+
+/* =====================================================
+   SKILLS
+===================================================== */
+
+.certificate-skills {
+  margin: 2px 0 20px;
+}
+
+.skills-label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #7188aa;
+
+  font-size: 11px;
+}
+
+.skills-list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 6px;
+}
+
+.skills-list span {
+  padding: 6px 9px;
+
+  border: 1px solid #223653;
+
+  border-radius: 7px;
+
+  color: #82a5d6;
+
+  background: rgba(29, 70, 120, 0.12);
+
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.certificate-description {
+  margin-bottom: 20px;
+}
+
+.certificate-description>span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #7188aa;
+
+  font-size: 11px;
+}
+
+.certificate-description p {
+  margin: 0;
+
+  color: #8498b8;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =====================================================
+   VIEW BUTTON
+===================================================== */
+
+.view-certificate-btn {
+  width: 100%;
+
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: auto;
+
+  border: none;
+
+  border-radius: 12px;
+
+  color: white;
+
+  background:
+    linear-gradient(135deg,
+      #3184ff,
+      #3b73e9);
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 25px rgba(39, 123, 255, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.view-certificate-btn:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(39, 123, 255, 0.3);
+}
+
+
+/* =====================================================
+   TRUST STRIP
+===================================================== */
+
+.certificate-trust-strip {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+
+  margin-top: 28px;
+
+  padding: 18px;
+
+  border: 1px solid #1a2a43;
+
+  border-radius: 18px;
+
+  background:
+    rgba(10, 20, 34, 0.7);
+}
+
+.trust-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  min-width: 0;
+}
+
+.trust-icon {
+  width: 40px;
+  height: 40px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  color: #4b9aff;
+
+  background: rgba(40, 126, 255, 0.08);
+}
+
+.trust-item h4 {
+  margin: 0 0 3px;
+
+  color: #dce6f7;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.trust-item p {
+  margin: 0;
+
+  color: #657b9d;
+
+  font-size: 10px;
+
+  line-height: 1.4;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .certificates-content {
+    grid-template-columns: 300px minmax(0, 1fr);
+
+    gap: 18px;
+  }
+
+  .certificate-preview-body {
+    grid-template-columns: 1fr;
+  }
+
+  .certificate-information {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    column-gap: 20px;
+  }
+
+  .certificate-description,
+  .certificate-skills,
+  .view-certificate-btn {
+    grid-column: 1 / -1;
+  }
+
+  .view-certificate-btn {
+    margin-top: 5px;
+  }
+
+  .certificate-trust-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 720px) {
+
+  .certificates-page {
+    padding: 90px 0 70px;
+  }
+
+  .certificates-container {
+    width: min(100% - 28px, 600px);
+  }
+
+
+  /* Header */
+
+  .certificates-header {
+    align-items: flex-start;
+
+    text-align: left;
+
+    margin-bottom: 35px;
+  }
+
+  .certificate-heading-badge {
+    padding: 8px 13px;
+
+    font-size: 10px;
+  }
+
+  .certificates-header h1 {
+    margin-top: 15px;
+
+    font-size: 38px;
+
+    letter-spacing: -1px;
+  }
+
+  .certificates-header>p {
+    max-width: 500px;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+  }
+
+  .certificate-heading-line {
+    margin-top: 15px;
+  }
+
+
+  /* Main */
+
+  .certificates-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 16px;
+  }
+
+
+  /* Certificate list */
+
+  .certificate-list {
+    gap: 9px;
+  }
+
+  .certificate-item {
+    min-height: 68px;
+
+    padding: 10px 11px;
+
+    border-radius: 13px;
+
+    gap: 11px;
+  }
+
+  .certificate-item:hover {
+    transform: none;
+  }
+
+  .certificate-item-icon {
+    width: 43px;
+    height: 43px;
+
+    border-radius: 11px;
+  }
+
+  .certificate-item-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .certificate-item-info h3 {
+    margin-bottom: 4px;
+
+    font-size: 13px;
+  }
+
+  .certificate-item-meta {
+    font-size: 10px;
+  }
+
+  .certificate-item-arrow {
+    width: 17px;
+    height: 17px;
+  }
+
+
+  /* Preview */
+
+  .certificate-preview {
+    border-radius: 16px;
+  }
+
+  .certificate-preview-header {
+    padding: 15px;
+
+    align-items: flex-start;
+  }
+
+  .certificate-preview-icon {
+    width: 41px;
+    height: 41px;
+
+    border-radius: 10px;
+  }
+
+  .certificate-preview-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .certificate-title-row {
+    display: block;
+  }
+
+  .certificate-title-row h2 {
+    margin-bottom: 5px;
+
+    font-size: 15px;
+  }
+
+  .certificate-preview-title p {
+    font-size: 10px;
+  }
+
+  .verified-badge {
+    display: none;
+  }
+
+
+  /* Preview body */
+
+  .certificate-preview-body {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 15px;
+  }
+
+
+  /* Image */
+
+  .certificate-image-wrapper {
+    aspect-ratio: 1.4 / 1;
+
+    border-radius: 10px;
+  }
+
+
+  /* Information */
+
+  .certificate-information {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .certificate-info-row {
+    margin-bottom: 14px;
+  }
+
+  .certificate-info-icon {
+    width: 31px;
+    height: 31px;
+  }
+
+  .certificate-info-row span {
+    font-size: 10px;
+  }
+
+  .certificate-info-row strong {
+    font-size: 12px;
+  }
+
+  .certificate-description p {
+    font-size: 11px;
+  }
+
+  .skills-list span {
+    font-size: 9px;
+  }
+
+  .view-certificate-btn {
+    min-height: 44px;
+
+    margin-top: 5px;
+
+    font-size: 12px;
+  }
+
+
+  /* Trust */
+
+  .certificate-trust-strip {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+
+    margin-top: 16px;
+
+    padding: 15px;
+  }
+
+  .trust-item {
+    padding: 5px 0;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 400px) {
+
+  .certificates-header h1 {
+    font-size: 34px;
+  }
+
+  .certificate-item-info h3 {
+    max-width: 180px;
+
+    white-space: normal;
+  }
+
+  .certificate-item-meta {
+    flex-wrap: wrap;
+  }
+
+  .certificate-preview-body {
+    padding: 12px;
+  }
+}

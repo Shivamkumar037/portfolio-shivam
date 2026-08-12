@@ -9,6 +9,7 @@ import ProjectDetail from './pages/ProjectDetail';
 import Contact from './pages/Contact';
 import Experience from './pages/Experience';
 import './index.css';
+import Certificates from "./pages/Certificates";
 
 function App() {
   const [activePage, setActivePage] = useState('home');
@@ -55,6 +56,10 @@ function App() {
             projectId={selectedProjectId}
             onNavigate={handleNavigate}
           />
+        );
+      case 'certificate':
+        return (
+         <Certificates></Certificates>
         );
       default:
         return <Home onNavigate={handleNavigate} onOpenProject={openProject} />;
