@@ -111,19 +111,17 @@ const projects = {
       description:
         "A full-stack e-commerce application with product browsing, category filtering, cart management, user authentication and secure checkout.",
       image:
-        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=500&fit=crop",
-      screenshots: [
-        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&h=500&fit=crop",
-        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&h=500&fit=crop",
-        "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&h=500&fit=crop",
-        "https://images.unsplash.com/photo-1560343090-f0409e92791a?w=800&h=500&fit=crop",
-        "https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&h=500&fit=crop"
-      ],
+        "/e-comerse/e-com2.png",
+      screenshots: ["/e-comerse/e-com2.png",
+        "/e-comerse/e-com1.png",
+"/e-comerse/e-com3.png",
+        "/e-comerse/e-com4.png",
+        "/e-comerse/e-com5.png"      ],
       type: "Web App",
       category: "webapp",
-      tags: ["React", "JavaScript", "Tailwind CSS", "Java", "Spring Boot", "MySQL"],
+      tags: ["React", "JavaScript","Express","Node js","MongoDB"],
       liveUrl: "",
-      githubUrl: "https://github.com/Shivamkumar037",
+      githubUrl: "https://github.com/Shivamkumar037/intershipProject",
       featured: true,
       role: "Full Stack Developer",
       duration: "Jan 2024 – Mar 2024",
@@ -139,9 +137,9 @@ const projects = {
         "Responsive design for all devices"
       ],
       techStack: {
-        frontend: ["React", "JavaScript", "Tailwind CSS", "Axios"],
-        backend: ["Java", "Spring Boot", "JWT"],
-        database: ["MySQL"]
+        frontend: ["React", "JavaScript"],
+        backend: ["Express js", "Node js", "JWT"],
+        database: ["MongoDB"]
       },
       challengesText:
         "Handling state management for cart and user sessions was challenging. Implementing secure authentication and integrating frontend with backend taught me a lot about full-stack development.",
@@ -150,130 +148,23 @@ const projects = {
     },
     {
       id: 4,
-      title: "Task Management API",
-      subtitle: "Backend",
-      description:
-        "RESTful API for task management with JWT authentication and role-based access.",
-      image:
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop",
-      screenshots: [
-        "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&h=500&fit=crop",
-        "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=500&fit=crop"
-      ],
-      type: "API",
-      category: "api",
-      tags: ["Java", "Spring Boot", "MySQL", "JWT"],
-      liveUrl: "",
-      githubUrl: "https://github.com/Shivamkumar037",
-      featured: true,
-      role: "Backend Developer",
-      duration: "2025",
-      projectType: "Personal Project",
-      status: "Completed",
-      about:
-        "A secure RESTful API for managing tasks with JWT authentication, role-based access control and clean layered architecture using Spring Boot.",
-      features: [
-        "JWT authentication",
-        "Role-based access (Admin / User)",
-        "Full CRUD for tasks",
-        "Input validation & error handling"
-      ],
-      techStack: {
-        frontend: [],
-        backend: ["Java", "Spring Boot", "JWT", "Hibernate"],
-        database: ["MySQL"]
-      },
-      challengesText:
-        "Designing clean layered architecture and securing endpoints with Spring Security.",
-      challenges: ["Auth flow design", "Role permissions", "API versioning"],
-      learnings: ["Spring Security", "DTO pattern", "API best practices"]
-    },
-    {
-      id: 5,
-      title: "Weather App",
-      subtitle: "Lucknow",
-      description:
-        "Real-time weather application using OpenWeatherMap API.",
-      image:
-        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=500&fit=crop",
-      screenshots: [
-        "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=500&fit=crop"
-      ],
-      type: "Web App",
-      category: "webapp",
-      tags: ["React", "Weather API", "CSS"],
-      liveUrl: "",
-      githubUrl: "https://github.com/Shivamkumar037",
-      featured: true,
-      role: "Frontend Developer",
-      duration: "2025",
-      projectType: "Personal Project",
-      status: "Completed",
-      about:
-        "A clean weather app that shows real-time conditions for any city using the OpenWeatherMap API, with a focus on simple UX and responsive layout.",
-      features: [
-        "City search",
-        "Current weather + details",
-        "Responsive UI",
-        "Error handling for invalid cities"
-      ],
-      techStack: {
-        frontend: ["React", "CSS", "Fetch API"],
-        backend: [],
-        database: []
-      },
-      challengesText: "Handling API errors and loading states cleanly.",
-      challenges: ["API error states", "Loading UX"],
-      learnings: ["Async data fetching", "Conditional rendering"]
-    },
-    {
-      id: 6,
-      title: "Blog Website",
-      subtitle: "Tech Insights",
-      description:
-        "Blogging platform to create, read and manage tech articles.",
-      image:
-        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=500&fit=crop",
-      screenshots: [
-        "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&h=500&fit=crop"
-      ],
-      type: "Website",
-      category: "website",
-      tags: ["React", "Node.js", "MongoDB"],
-      liveUrl: "",
-      githubUrl: "https://github.com/Shivamkumar037",
-      featured: true,
-      role: "Full Stack Developer",
-      duration: "2025",
-      projectType: "Personal Project",
-      status: "Completed",
-      about:
-        "A blogging platform for writing and reading tech articles with basic CRUD and a clean reading experience.",
-      features: [
-        "Create & edit posts",
-        "Article listing & detail view",
-        "Simple auth",
-        "Responsive layout"
-      ],
-      techStack: {
-        frontend: ["React"],
-        backend: ["Node.js", "Express"],
-        database: ["MongoDB"]
-      },
-      challengesText: "Structuring content models and keeping the editor simple.",
-      challenges: ["Content modeling", "Auth basics"],
-      learnings: ["MERN flow", "REST CRUD"]
-    },
-    {
-      id: 7,
       title: "Electronic Voting Machine (EVM)",
       subtitle: "Spring Boot",
       description:
-        "Secure end-to-end voting platform with role-based auth, results and Docker support.",
+        "Secure end-to-end voting platform with role-based auth, results",
       image:
-        "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=800&h=500&fit=crop",
+        "/Voting System/voting1.png",
       screenshots: [
-        "https://images.unsplash.com/photo-1540910419892-4a36d2c3266c?w=800&h=500&fit=crop"
+        "/Voting System/voting1.png",
+        "/Voting System/voting2.png",
+        "/Voting System/voting3.png",
+        "/Voting System/voting4.png",
+        "/Voting System/voting5.png",
+        "/Voting System/voting6.png",
+        "/Voting System/voting7.png",
+        "/Voting System/voting8.png",
+        "/Voting System/voting9.png",
+
       ],
       type: "Web App",
       category: "webapp",
@@ -286,21 +177,20 @@ const projects = {
       projectType: "Academic / Personal",
       status: "Completed",
       about:
-        "A secure voting platform with role-based authentication, vote casting, results aggregation and Docker-ready deployment.",
+        "A secure voting platform with role-based authentication, vote casting, results aggregation ",
       features: [
         "Role-based auth (Admin / Voter)",
         "Secure vote casting",
-        "Results dashboard",
-        "Docker support"
+        "Results dashboard"
       ],
       techStack: {
         frontend: [],
-        backend: ["Spring Boot", "Hibernate", "Spring Security"],
+        backend: ["Spring Boot", "Hibernate", "Spring Security","Thymeleaf"],
         database: ["MySQL"]
       },
       challengesText: "Ensuring vote integrity and preventing double voting.",
       challenges: ["Vote integrity", "Security hardening"],
-      learnings: ["Spring Security", "Docker basics"]
+      learnings: ["Spring Security"]
     },
     {
       id: 8,
