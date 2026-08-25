@@ -37,7 +37,8 @@ const global = {
     linkedin: "https://linkedin.com/in/shivam-kumar-347473310",
     email: "shivamkumar37je@gmail.com",
     phone: "+91 9792079093",
-    instagram: "https://www.instagram.com/shivam_kumar037s"
+    instagram: "https://www.instagram.com/shivam_kumar037s",
+leetcode:"https://leetcode.com/u/shivamkumar37/"
   },
 
   footer: {
